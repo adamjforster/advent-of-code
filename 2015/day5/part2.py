@@ -3,10 +3,6 @@
 from collections import deque
 
 
-VOWELS = 'aeiou'
-NAUGHTY_PAIRS = ['ab', 'cd', 'pq', 'xy']
-
-
 def is_nice(string):
     return (
         has_pair_repetition(string) and
