@@ -27,10 +27,7 @@ def move(position, instruction):
     elif instruction == RIGHT:
         new_position[1] = min(4, position[1] + 1)
 
-    try:
-        if KEYPAD[new_position[0]][new_position[1]] is None:
-            raise IndexError
-    except IndexError:
+    if KEYPAD[new_position[0]][new_position[1]] is None:
         return position
     else:
         return new_position
