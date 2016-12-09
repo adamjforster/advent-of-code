@@ -7,6 +7,4 @@ def is_possible(*args):
 
 
 with open('input.txt', 'r') as f:
-    count = 0
-    
     print len([True for line in f if is_possible(line.split())])
