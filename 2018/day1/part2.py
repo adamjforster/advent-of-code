@@ -7,7 +7,7 @@ from itertools import cycle
 
 with open('input.txt', 'r') as f:
     frequency = 0
-    previous = [frequency]
+    previous = set([frequency])
     
     for value in cycle(f):
         frequency += int(value)
@@ -16,4 +16,4 @@ with open('input.txt', 'r') as f:
             print(frequency)
             break
             
-        previous.append(frequency)
+        previous.add(frequency)
